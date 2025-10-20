@@ -37,6 +37,7 @@ text
 2. Install dependencies: `npm install`
 3. Run the development server: `npm run dev`
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Navigate to `/booking` to view the booking page
 
 ## Components
 
@@ -55,3 +56,9 @@ text
 ### CancellationPolicy
 - Cancellation policy text
 - Ground rules list
+
+## Responsive Design
+
+The page is fully responsive and adapts to different screen sizes:
+- Mobile: Single column layout
+- Desktop: Two-column layout with form on left and summary on right
