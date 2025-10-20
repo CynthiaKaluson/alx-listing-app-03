@@ -1,0 +1,23 @@
+{
+  "name": "alx-listing-app-03",
+  "version": "1.0.0",
+  "description": "Booking detail page for ALX listing app",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "13.x",
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
+    "typescript": "^5.x",
+    "@types/react": "^18.x",
+    "@types/node": "^20.x",
+    "tailwindcss": "^3.x",
+    "autoprefixer": "^10.x",
+    "postcss": "^8.x"
+  }
+}
