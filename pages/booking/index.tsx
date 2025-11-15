@@ -1,25 +1,35 @@
-import BookingForm from "@/components/booking/BookingForm";
-import OrderSummary from "@/components/booking/OrderSummary";
-import CancellationPolicy from "@/components/booking/CancellationPolicy";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import PropertyCard from "@/components/property/PropertyCard";
 
-export default function BookingPage() {
-  const bookingDetails = {
-    propertyName: "Villa Arrecife Beach House",
-    price: 7500,
-    bookingFee: 65,
-    totalNights: 3,
-    startDate: "24 August 2024",
-  };
+export default function Home() {
+  const [properties, setProperties] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProperties = async () => {
+      try {
+        const response = await axios.get("/api/properties");
+        setProperties(response.data);
+      } catch (error) {
+        console.error("Error fetching properties:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProperties();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
-    <div className="container mx-auto p-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="space-y-6">
-          <BookingForm />
-          <CancellationPolicy />
-        </div>
-        <OrderSummary bookingDetails={bookingDetails} />
-      </div>
+    <div className="grid grid-cols-3 gap-4">
+      {properties.map((property) => (
+        <PropertyCard key={property.id} property={property} />
+      ))}
     </div>
   );
 }
