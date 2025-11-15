@@ -1,64 +1,177 @@
-# ALX Listing App - Booking Detail Page
+# ALX Listing App - Milestone 5: API Integration
 
-A responsive booking detail page built with Next.js, TypeScript, and Tailwind CSS that allows users to enter contact information, payment details, and review their booking summary.
+A modern Airbnb clone built with Next.js, TypeScript, and Tailwind CSS, featuring dynamic API integration for property listings, bookings, and reviews.
 
-## Features
+## 🚀 Project Overview
 
-- **Contact Details Form**: Collects user's first name, last name, email, and phone number
-- **Payment Information**: Secure payment form with card details
-- **Billing Address**: Complete billing address collection
-- **Order Summary**: Displays booking details, fees, and grand total
-- **Cancellation Policy**: Clear cancellation terms and conditions
-- **Ground Rules**: House rules for guests
+This project transforms a static property listing application into a fully dynamic platform by integrating REST APIs. It demonstrates real-world API consumption patterns used by booking platforms like Airbnb and Booking.com.
 
-## Tech Stack
+## 📋 Milestone Objectives
+
+- **Replace hardcoded data** with dynamic API calls
+- **Implement loading and error states** for better UX
+- **Handle form submissions** to backend APIs
+- **Connect multiple components** to various API endpoints
+- **Use dynamic routing** for property details
+
+## 🛠️ Tech Stack
 
 - **Framework**: Next.js with TypeScript
 - **Styling**: Tailwind CSS
-- **Components**: React functional components
+- **HTTP Client**: Axios
+- **State Management**: React Hooks (useState, useEffect)
 
-## Project Structure
-alx-listing-app-03/
-├── components/
-│ └── booking/
-│ ├── BookingForm.tsx
-│ ├── OrderSummary.tsx
-│ └── CancellationPolicy.tsx
+## 📡 API Endpoints Integrated
+
+- `GET /api/properties` - Fetch property listings
+- `GET /api/properties/:id` - Fetch single property details
+- `POST /api/bookings` - Submit booking information
+- `GET /api/properties/:id/reviews` - Fetch property reviews
+
+## 🗂️ Project Structure
+alx-listing-app-04/
 ├── pages/
-│ └── booking/
-│ └── index.tsx
-└── README.md
+│ ├── index.tsx # Property listing page
+│ ├── property/[id].tsx # Property detail page
+│ └── booking/index.tsx # Booking form page
+├── components/
+│ └── property/
+│ ├── PropertyCard.tsx
+│ ├── PropertyDetail.tsx
+│ └── ReviewSection.tsx
+├── public/
+└── package.json
 
 text
 
-## Getting Started
+## 🚦 Getting Started
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-5. Navigate to `/booking` to view the booking page
+1. **Install dependencies**:
+   ```bash
+   npm install
+Run development server:
 
-## Components
+bash
+npm run dev
+Open your browser and navigate to http://localhost:3000
 
-### BookingForm
-- Contact information inputs
-- Payment details form
-- Billing address fields
-- Confirm & Pay button
+📝 Implementation Tasks
+✅ Completed in this Milestone
+API integration for property listing page
 
-### OrderSummary
-- Property details and image
-- Stay information
-- Price breakdown
-- Grand total calculation
+Dynamic property detail pages with route parameters
 
-### CancellationPolicy
-- Cancellation policy text
-- Ground rules list
+Booking form submission to API
 
-## Responsive Design
+Dynamic reviews fetching
 
-The page is fully responsive and adapts to different screen sizes:
-- Mobile: Single column layout
-- Desktop: Two-column layout with form on left and summary on right
+Loading and error state handling
+
+TypeScript implementation for type safety
+
+🎯 Learning Outcomes
+After completing this project, developers will be able to:
+
+Implement API calls using axios in Next.js applications
+
+Handle asynchronous data fetching with proper error boundaries
+
+Build responsive UIs that adapt to dynamic data
+
+Manage form submissions with real-time validation
+
+Use dynamic routing for parameter-based content fetching
+
+📞 Development
+This project is part of the ALX Software Engineering program, focusing on full-stack development with modern web technologies.
+
+Built with ❤️ for learning real-world web development practices.
+EOFcat > README.md << 'EOF'
+# ALX Listing App - Milestone 5: API Integration
+
+A modern Airbnb clone built with Next.js, TypeScript, and Tailwind CSS, featuring dynamic API integration for property listings, bookings, and reviews.
+
+## 🚀 Project Overview
+
+This project transforms a static property listing application into a fully dynamic platform by integrating REST APIs. It demonstrates real-world API consumption patterns used by booking platforms like Airbnb and Booking.com.
+
+## 📋 Milestone Objectives
+
+- **Replace hardcoded data** with dynamic API calls
+- **Implement loading and error states** for better UX
+- **Handle form submissions** to backend APIs
+- **Connect multiple components** to various API endpoints
+- **Use dynamic routing** for property details
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js with TypeScript
+- **Styling**: Tailwind CSS
+- **HTTP Client**: Axios
+- **State Management**: React Hooks (useState, useEffect)
+
+## 📡 API Endpoints Integrated
+
+- `GET /api/properties` - Fetch property listings
+- `GET /api/properties/:id` - Fetch single property details
+- `POST /api/bookings` - Submit booking information
+- `GET /api/properties/:id/reviews` - Fetch property reviews
+
+## 🗂️ Project Structure
+alx-listing-app-04/
+├── pages/
+│ ├── index.tsx # Property listing page
+│ ├── property/[id].tsx # Property detail page
+│ └── booking/index.tsx # Booking form page
+├── components/
+│ └── property/
+│ ├── PropertyCard.tsx
+│ ├── PropertyDetail.tsx
+│ └── ReviewSection.tsx
+├── public/
+└── package.json
+
+text
+
+## 🚦 Getting Started
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+Run development server:
+
+bash
+npm run dev
+Open your browser and navigate to http://localhost:3000
+
+📝 Implementation Tasks
+✅ Completed in this Milestone
+API integration for property listing page
+
+Dynamic property detail pages with route parameters
+
+Booking form submission to API
+
+Dynamic reviews fetching
+
+Loading and error state handling
+
+TypeScript implementation for type safety
+
+🎯 Learning Outcomes
+After completing this project, developers will be able to:
+
+Implement API calls using axios in Next.js applications
+
+Handle asynchronous data fetching with proper error boundaries
+
+Build responsive UIs that adapt to dynamic data
+
+Manage form submissions with real-time validation
+
+Use dynamic routing for parameter-based content fetching
+
+📞 Development
+This project is part of the ALX Software Engineering program, focusing on full-stack development with modern web technologies.
+
+Built with ❤️ for learning real-world web development practices.
